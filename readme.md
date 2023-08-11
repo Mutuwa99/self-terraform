@@ -20,7 +20,7 @@ This Terraform project automates the provisioning of an EC2 instance, a PostgreS
 
 - aws_access_key = "your_aws_access_key"
 - aws_secret_key = "your_aws_secret_key"
-- region = "us-west-1"
+- region = " "
 
 3. Initialize and apply the Terraform configuration:
 - terraform init
