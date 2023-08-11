@@ -47,7 +47,7 @@ resource "aws_route_table_association" "public_subnet_association" {
 }
 
 resource "aws_instance" "ec2_instance" {
-  ami           = "ami-0f34c5ae932e6f0e4"  
+  ami           = "ami-"  
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.my_subnet.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
@@ -60,7 +60,7 @@ resource "aws_instance" "ec2_instance" {
     sudo yum install -y httpd
     sudo systemctl start httpd
     sudo systemctl enable httpd
-    echo "Hello from your EC2 instance!" | sudo tee /var/www/html/index.html
+    echo "welcome to my 4sure web app!" | sudo tee /var/www/html/index.html
     EOF
 }
 
