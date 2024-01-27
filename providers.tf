@@ -12,5 +12,3 @@ provider "aws" {
   secret_key = ""
 }
 
-
-# Hi  @4Sure team , note that i have removed my AWS CRED here, due to the security issues that may arise if i push the code to github with these keys. Thanks
