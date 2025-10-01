@@ -1,28 +1,7 @@
-variable "key_name" {
-  description = "SSH key pair name"
-  type        = string
-}
-
-variable "ami_id" {
-  description = "AMI ID"
-  type        = string
-}
-
 variable "region" {
   description = "AWS region"
   type        = string
   default     = "us-east-1"
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
-  default     = "t2.micro"
-}
-
-variable "environment" {
-  description = "Deployment environment"
-  type        = string
 }
 
 variable "team" {
@@ -30,12 +9,15 @@ variable "team" {
   type        = string
 }
 
-variable "subnet_id" {
-  description = "Subnet ID where the instance will be deployed"
-  type        = string
-}
-
-variable "security_group_id" {
-  description = "Security group ID to attach to the instance"
-  type        = string
+variable "servers" {
+  description = "Map of servers to create, with individual specs"
+  type = map(object({
+    name              = string
+    ami_id            = string
+    instance_type     = string
+    key_name          = string
+    subnet_id         = string
+    security_group_id = string
+    environment       = string
+  }))
 }
