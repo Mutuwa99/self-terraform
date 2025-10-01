@@ -1,7 +1,7 @@
 key_name          = "my-key"
-ami_id            = "ami-001d22ffbcfb50b93"  # Replace with a valid AMI ID
+ami_id            = "ami-091a906f2e1e40076"  # Replace with a valid AMI ID
 region            = "eu-west-1"
-instance_type     = "t2.micro"
+instance_type     = "t3.micro"
 environment       = "dev"
 team              = "platform-team"
 subnet_id         = "subnet-0e92060ace5e8378f"  
